@@ -42,3 +42,4 @@ Chú ý: biển 2 dòng sẽ được định dạng là "A-B" (A là dòng trê
 
 ## Hướng cải thiện project
 * Thêm chức năng để có thể nhận diện từ ảnh lấy trực tiếp từ camera
+* Thêm chức năng xóa các dữ liệu đã cũ 
