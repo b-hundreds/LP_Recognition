@@ -4,13 +4,14 @@
 * Nhận dạng biển số xe (Dùng yolov8 cho cả 2 task là detection và recognition, sử dụng thư viện albumentation để quay ảnh ngẫu nhiên trong khoảng -45 độ đến 45 độ), lưu kết quả vào database
 * Tìm kiếm ảnh biển số xe trong database theo chuỗi chữ số của biển
 
-## Install environments
+## Cài đặt môi trường
 ```
 pip install -r requirements.txt
 ```
 Ngoài ra, mongodb cũng cần được cài trên máy (Đã được bật, đường kết nối là "mongodb://localhost:27017")
 
-## Start web project
+## Cách bật web
+Chạy câu lệnh sau:
 ```
 python -m flask run
 ```
@@ -33,3 +34,8 @@ Chú ý: biển 2 dòng sẽ được định dạng là "A-B" (A là dòng trê
    <img src="results2.jpg" >
     Database
 </p>
+
+## Nhận xét
+* Mô hình nhận dạng đúng và chuẩn với những ảnh khác nhau, một số ảnh bị nghiêng một chút vẫn có thể nhận dạng đúng
+* Tuy nhiên, với một số ảnh bị quá nghiêng, mô hình hay bị nhầm lẫn các kí tự, ví dụ như 1 với 7, 0 với D, X với K
+* Đối với các loại biển số xe khác loại biển số xe thường: Chỉ nhận diện được biển số chứ không nhận dạng các kí tự của biển số xe đó (Với task detection, mô hình được huấn luyện với bộ dữ liệu bao gồm cả biển số xe thường, biển số xe quân đội, ... nhưng với task recognition, chỉ có dữ liệu của biển số xe thường) 
