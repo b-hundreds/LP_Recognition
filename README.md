@@ -18,3 +18,13 @@ Sau khi chạy, bật link http://127.0.0.1:5000 để tương tác với web
 Chú ý: biển 2 dòng sẽ được định dạng là "A-B" (A là dòng trên, B là dòng dưới), còn biển 1 dòng sẽ được định dạng thành 1 chuỗi liên tục "ABCDS..."
 
 ## Results
+
+   <p align="left" >
+   <img src="results1.jpg" >
+    Chức năng nhận diện biển số
+</p>
+
+   <p align="right" >
+   <img src="results3.jpg" >
+    Chức năng tìm kiếm biển số
+</p>
