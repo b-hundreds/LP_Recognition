@@ -14,4 +14,5 @@ Ngoài ra, mongodb cũng cần được cài trên máy (Đã được bật, đ
 ```
 python -m flask run
 ```
-Sau khi chạy, bật link (http://127.0.0.1:5000) để thấy giao diện web
+Sau khi chạy, bật link http://127.0.0.1:5000 để tương tác với web
+Chú ý: biển 2 dòng sẽ được định dạng là "A-B" (A là dòng trên, B là dòng dưới), còn biển 1 dòng sẽ được định dạng thành 1 chuỗi liên tục "ABCDS..."
