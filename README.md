@@ -4,7 +4,7 @@
 * Nhận dạng biển số xe (Đầu vào là một bức ảnh), lưu kết quả vào database
 * Tìm kiếm ảnh biển số xe trong database theo chuỗi chữ số của biển
 
-## Install environments
+# Install environments
 ```
 pip install -r requirements.txt
 ```
