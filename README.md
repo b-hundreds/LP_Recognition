@@ -39,8 +39,8 @@ Chú ý: biển 2 dòng sẽ được định dạng là "A-B" (A là dòng trê
 * Mô hình nhận dạng đúng và chuẩn với những ảnh khác nhau, một số ảnh bị nghiêng một chút vẫn có thể nhận dạng đúng
 * Tuy nhiên, với một số ảnh bị quá nghiêng, mô hình hay bị nhầm lẫn các kí tự, ví dụ như 1 với 7, 0 với D, X với K
 * Đối với các loại biển số xe khác loại biển số xe thường: Chỉ nhận diện được biển số chứ không nhận dạng các kí tự của biển số xe đó (Với task detection, mô hình được huấn luyện với bộ dữ liệu bao gồm cả biển số xe thường, biển số xe quân đội, ... nhưng với task recognition, chỉ có dữ liệu của biển số xe thường)
-* Tìm hiểu cách đóng gói với docker
 
 ## Hướng cải thiện project
 * Thêm chức năng để có thể nhận diện từ ảnh lấy trực tiếp từ camera
 * Thêm chức năng xóa các dữ liệu đã cũ 
+* Tìm hiểu cách đóng gói với docker
