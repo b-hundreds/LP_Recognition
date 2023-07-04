@@ -19,12 +19,17 @@ Chú ý: biển 2 dòng sẽ được định dạng là "A-B" (A là dòng trê
 
 ## Results
 
-   <p align="left" >
+   <p align="center" >
    <img src="results1.jpg" >
     Chức năng nhận diện biển số
 </p>
 
-   <p align="right" >
+   <p align="center" >
    <img src="results3.jpg" >
     Chức năng tìm kiếm biển số
+</p>
+
+   <p align="center" >
+   <img src="results2.jpg" >
+    Database
 </p>
