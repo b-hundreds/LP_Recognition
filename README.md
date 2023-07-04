@@ -1,4 +1,4 @@
-# License Plate Recognition
+## License Plate Recognition
 Đây là một project xây dựng một web nhận dạng biển số xe, gồm 2 chức năng:<br>
 
 * Nhận dạng biển số xe (Đầu vào là một bức ảnh), lưu kết quả vào database
