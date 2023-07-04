@@ -1,0 +1,98 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <div class="row" style="background-color:bisque; width: 300">
+        <div class="col-6">
+            <div class="container">
+                <form action="#" method="POST" enctype="multipart/form-data">
+                    <div class="input-group">
+                        <input type="file" class="form-control" name="image_name" style="background-color: rgb(255, 255, 255)", required>
+                        <input type="submit" value="upload" class="btn btn-outline-secondary" style="background-color: rgb(224, 224, 224)">
+                    </div>
+                </form>
+            </div>
+
+            {% if upload %}
+                <div class="container">
+                    <table>
+                        <tr>
+                            <td>
+                                <img class="rounded float-left img-fluid" src="/static/upload/{{ upload_image}}" alt="" style="max-height: 350px">
+                            </td>
+                            <td>
+                                <img class="rounded float-right img-fluid" src="/static/predict/{{ upload_image}}" alt="" style="max-height: 350px">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            {% endif %}
+        </div>
+
+        <div class="col-6">
+            <table class="table table-striped" style="height: 350px">
+                <thead>
+                  <tr>
+                    <th scope="col">Number Plate</th>
+                    <th scope="col">1</th>
+                    <th scope="col">2</th>
+                    <th scope="col">3</th>
+                    <th scope="col">4</th>
+                    <th scope="col">5</th>
+                    <th scope="col">6</th>
+                    <th scope="col">7</th>
+                    <th scope="col">8</th>
+                    <th scope="col">9</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    {% for i1 in range(list_plate_number|length)%}
+                        <tr>
+                            <td>{{list_plate_number[i1]}}</td>
+                            {% for i2 in range(list_plate_number[i1]|length)%}
+                                {% if list_plate_number[i1][i2] != "-" %}
+                                    <td>{{list_plate_number[i1][i2]}}</td>
+                                {% endif %}
+                            {% endfor %}
+                        </tr>
+
+                        <tr>
+                            <td> Probility </td>
+                            {% for i3 in range(list_probs[i1]|length)%}
+                                <td>{{(list_probs[i1][i3]|float * 100)|int}}</td>
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+              </table>
+        </div>
+        
+    </div>
+
+    <div class="row" style="background-color: rgb(228, 216, 202);">
+        <div class="col-12">
+            <form action="#" method="POST" enctype="multipart/form-data">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" name="find_plate" placeholder="Find plate number" required>
+                    <button class="btn btn-outline-secondary" type="submit" style="background-color: rgb(224, 224, 224)">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    
+        <div class="row" style="background-color: rgb(228, 216, 202);">
+            <div class="col-12">
+                <h2 style="padding-left: 100px;">RESULTS</h2>
+                <div class="gallery" style="height: 400px; overflow-x: scroll;">
+                    {% if list_plate %}
+                    {% for plate_data in list_plate %}
+                        <img src={{plate_data["path_save"]}} class="img-fluid" title="{{plate_data["date"]}}" style="max-height: 390px">
+                    {% endfor %}
+                    {% endif %}
+                </div>
+                
+            </div>
+        </div>
+    
+{% endblock %}
