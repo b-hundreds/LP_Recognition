@@ -1,4 +1,4 @@
-### License Plate Recognition
+# License Plate Recognition
 Đây là một project xây dựng một web nhận dạng biển số, gồm 2 chức năng:<br>
 
 * Nhận dạng biển số xe (Dùng yolov8 cho cả 2 task là detection và recognition, sử dụng thư viện albumentation để quay ảnh ngẫu nhiên trong khoảng -45 độ đến 45 độ), lưu kết quả vào database
@@ -6,7 +6,7 @@
 
 # Cách sử dụng
 
-## Cách 1
+## Cách 1: Download project và cài đặt
 
 ### Cài đặt môi trường
 ```
@@ -24,7 +24,40 @@ Sau khi chạy, bật link http://127.0.0.1:5000 để tương tác với web
 
 Chú ý: biển 2 dòng sẽ được định dạng là "A-B" (A là dòng trên, B là dòng dưới), còn biển 1 dòng sẽ được định dạng thành 1 chuỗi liên tục "ABCDS..."
 
-## Results
+## Cách 2: Sử dụng Docker
+
+### Tải docker, đăng nhập và pull 2 image sau: hasybach1103/lp_recognition_web và hasybach1103/lp_recognition_database về máy
+
+### tạo file docker-compose.yml
+
+```
+version: '3.9'
+services:
+  mongo_db:
+    image: hasybach1103/lp_recognition_database
+    ports:
+      - "27017:27017"
+    restart: always
+    volumes:
+      - ./mongo_data:/data/db
+      - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+  web:
+    image: hasybach1103/lp_recognition_web
+    ports:
+      - "8080:8080"
+    depends_on: 
+      - mongo_db
+```
+### Di chuyển đến thư mục chứa file docker-compose.yml
+
+### Chạy lệnh để khởi động
+```
+docker compose up
+```
+
+### Đi đến địa chỉ http://127.0.0.1:8080
+
+# Results
 
    <p align="center" >
    <img src="results1.jpg" >
