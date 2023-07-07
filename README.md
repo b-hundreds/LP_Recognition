@@ -80,7 +80,7 @@ Cuối cùng, ta đi đến địa chỉ http://127.0.0.1:8080
 </p>
 
 ## Nhận xét
-* Mô hình nhận dạng đúng và chuẩn với những ảnh khác nhau, một số ảnh bị nghiêng một chút vẫn có thể nhận dạng đúng
+* Mô hình nhận dạng đúng và chuẩn với những ảnh trong bãi và ngoài trời, một số ảnh bị nghiêng một chút vẫn có thể nhận dạng đúng
 * Tuy nhiên, với một số ảnh bị quá nghiêng, mô hình hay bị nhầm lẫn các kí tự, ví dụ như 1 với 7, 0 với D, X với K
 * Đối với các loại biển số xe khác loại biển số xe thường: Chỉ nhận diện được biển số chứ không nhận dạng các kí tự của biển số xe đó (Với task detection, mô hình được huấn luyện với bộ dữ liệu bao gồm cả biển số xe thường, biển số xe quân đội, ... nhưng với task recognition, chỉ có dữ liệu của biển số xe thường)
 
