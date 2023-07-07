@@ -26,9 +26,16 @@ Chú ý: biển 2 dòng sẽ được định dạng là "A-B" (A là dòng trê
 
 ## Cách 2: Sử dụng Docker
 
-### Tải docker, đăng nhập và pull 2 image sau: hasybach1103/lp_recognition_web và hasybach1103/lp_recognition_database về máy
+### Tải các image từ Dockerhub
+* Tải docker
+* Đăng nhập bằng tài khoản Docker Hub
+* Pull 2 image sau: hasybach1103/lp_recognition_web và hasybach1103/lp_recognition_database bằng lệnh:
+```
+docker pull hasybach1103/lp_recognition_web
+docker pull hasybach1103/lp_recognition_database
+```
 
-### tạo file docker-compose.yml
+### Tạo file docker-compose.yml
 
 ```
 version: '3.9'
@@ -48,14 +55,12 @@ services:
     depends_on: 
       - mongo_db
 ```
-### Di chuyển đến thư mục chứa file docker-compose.yml
-
-### Chạy lệnh để khởi động
+### Tạo container chứa web
 ```
-docker compose up
+docker compose -f docker-compose.yml up
 ```
 
-### Đi đến địa chỉ http://127.0.0.1:8080
+Cuối cùng, ta đi đến địa chỉ http://127.0.0.1:8080
 
 # Results
 
