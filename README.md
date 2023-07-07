@@ -86,5 +86,5 @@ Cuối cùng, ta đi đến địa chỉ http://127.0.0.1:8080
 
 ## Hướng cải thiện project
 * Thêm chức năng để có thể nhận diện từ ảnh lấy trực tiếp từ camera
-* Thêm chức năng xóa các dữ liệu đã cũ 
+* Thêm chức năng tự động xóa các dữ liệu đã cũ 
 * Tìm hiểu cách đóng gói với docker
