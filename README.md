@@ -1,16 +1,21 @@
-## License Plate Recognition
+### License Plate Recognition
 Đây là một project xây dựng một web nhận dạng biển số, gồm 2 chức năng:<br>
 
 * Nhận dạng biển số xe (Dùng yolov8 cho cả 2 task là detection và recognition, sử dụng thư viện albumentation để quay ảnh ngẫu nhiên trong khoảng -45 độ đến 45 độ), lưu kết quả vào database
 * Tìm kiếm ảnh biển số xe trong database theo chuỗi chữ số của biển
 
-## Cài đặt môi trường
+### Cách sử dụng
+
+## Cách 1
+
+# Cài đặt môi trường
 ```
 pip install -r requirements.txt
 ```
 Ngoài ra, mongodb cũng cần được cài trên máy (Đã được bật, đường kết nối là "mongodb://localhost:27017")
 
-## Cách bật web
+# Khởi động web
+
 Chạy câu lệnh sau:
 ```
 python -m flask run
