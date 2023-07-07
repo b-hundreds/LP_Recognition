@@ -1,7 +1,7 @@
 # License Plate Recognition
 Đây là một project xây dựng một web nhận dạng biển số, gồm 2 chức năng:<br>
 
-* Nhận dạng biển số xe (Dùng yolov8 cho cả 2 task là detection và recognition, sử dụng thư viện albumentation để quay ảnh ngẫu nhiên trong khoảng -45 độ đến 45 độ), lưu kết quả vào database
+* Nhận dạng biển số xe (Dùng yolov8 cho cả 2 task là detection và recognition, sử dụng thư viện albumentation để quay ảnh ngẫu nhiên theo phân phối chuẩn trong khoảng -45 độ đến 45 độ), lưu kết quả vào database
 * Tìm kiếm ảnh biển số xe trong database theo chuỗi chữ số của biển
 
 # Cách sử dụng
