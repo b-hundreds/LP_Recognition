@@ -86,7 +86,7 @@ Cuối cùng, ta đi đến địa chỉ http://127.0.0.1:8080
 
 ## Cập nhật
 * Đã thêm các docker image cho project
-* Dùng .dockerignore với folder __pycache__ và .venv  ==> Docker images size giảm từ 13.3GB xuống còn 8.31GB
+* Dùng .dockerignore với folder (__pycache__) và (.venv)  ==> Docker images size giảm từ 13.3GB xuống còn 8.31GB
 * Do weight được lưu lại dưới dạng .pt nên ta phải khởi tạo lại model yolov8 mới load được => Phải sử dụng thư viện Ultralytics => Cải thiện bằng cách lưu model sau khi train dưới dạng .onnx và dùng thư viện ONNX runtime để load model 
 
 ## Hướng cải thiện project
